@@ -3,7 +3,7 @@
 A curated list of tools I actually use as a developer and student. Organized, fast-loading, and hosted free via GitHub Pages.
 
 ## 🌐 Live Demo
-https://aidenheiligenstein.github.io/dev-toolkit/
+https://aidenheiligenstein.github.io/dev-tools/
 
 ## Featured Tools
 - 🧠 Notion – second brain for organizing life + school
