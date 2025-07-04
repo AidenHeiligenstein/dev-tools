@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiden's Tech & Dev Tools</title>
+  <title>Aiden's Tech & Dev Picks</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: #f1f3f5;
@@ -34,14 +38,14 @@
     }
 
     .link-card {
-      background: #fff;
+      background: #ffffff;
       border-radius: 16px;
-      padding: 20px;
+      padding: 18px 20px;
       margin-bottom: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
-      color: #111;
+      color: inherit;
       display: flex;
       align-items: center;
       gap: 16px;
@@ -53,12 +57,12 @@
     }
 
     .link-icon {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     .link-title {
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     .disclaimer {
@@ -67,12 +71,28 @@
       margin-top: 2.5rem;
       text-align: center;
     }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111;
+        color: #eee;
+      }
+
+      .link-card {
+        background: #1e1e1e;
+        color: #eee;
+      }
+
+      .disclaimer {
+        color: #999;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🧠 Aiden's Tech & Dev Picks</h1>
-    <p class="subtitle">Stuff I use daily. Clean, useful, and affordable. Most links = affiliate, but I only share what slaps.</p>
+    <p class="subtitle">Stuff I use daily. Clean, useful, and affordable. Some links = affiliate, but I only share what slaps.</p>
 
     <a href="https://notion.so/?ref=sidhu" target="_blank" class="link-card">
       <span class="link-icon">🧠</span>
