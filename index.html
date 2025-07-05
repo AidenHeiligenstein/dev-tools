@@ -37,32 +37,49 @@
       margin-bottom: 2rem;
     }
 
-    .link-card {
+    .product-card {
       background: #ffffff;
       border-radius: 16px;
       padding: 18px 20px;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
       color: inherit;
       display: flex;
-      align-items: center;
-      gap: 16px;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .link-card:hover {
+    .product-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
-    .link-icon {
-      font-size: 1.6rem;
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
     }
 
-    .link-title {
+    .product-title {
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
+    }
+
+    .product-description {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .product-button {
+      margin-top: 10px;
+      text-align: center;
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     .disclaimer {
@@ -78,13 +95,21 @@
         color: #eee;
       }
 
-      .link-card {
+      .product-card {
         background: #1e1e1e;
         color: #eee;
       }
 
+      .product-description {
+        color: #ccc;
+      }
+
       .disclaimer {
         color: #999;
+      }
+
+      .product-button {
+        background-color: #228be6;
       }
     }
   </style>
@@ -92,30 +117,40 @@
 <body>
   <div class="container">
     <h1>🧠 Aiden's Tech & Dev Picks</h1>
-    <p class="subtitle">Stuff I use daily. Clean, useful, and affordable. Some links = affiliate, but I only share what slaps.</p>
+    <p class="subtitle">Affordable gear I’d recommend to any coder, gamer, or desk goblin. Affiliate links that help support me 🤍</p>
 
-    <a href="https://notion.so/?ref=sidhu" target="_blank" class="link-card">
-      <span class="link-icon">🧠</span>
-      <span class="link-title">Notion – organize projects, school, & life</span>
-    </a>
+    <!-- Budget Keyboard -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61D8vqR2FUL._AC_SL1500_.jpg" alt="Budget Keyboard">
+      <div class="product-title">Budget Recommended Keyboard</div>
+      <div class="product-description">
+        A sleek and responsive keyboard that won’t break the bank. Perfect for everyday dev work and casual gaming.
+      </div>
+      <a href="https://amzn.to/3IsPwbc" class="product-button" target="_blank">View on Amazon</a>
+    </div>
 
-    <a href="https://hostinger.com/?ref=sidhu" target="_blank" class="link-card">
-      <span class="link-icon">🌐</span>
-      <span class="link-title">Hostinger – build & host your resume or portfolio</span>
-    </a>
+    <!-- Best Keyboard -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71xrPbqVtbL._AC_SL1500_.jpg" alt="Best Keyboard">
+      <div class="product-title">Best Keyboard (Premium Pick)</div>
+      <div class="product-description">
+        Top-tier mechanical keyboard with a clean feel and buttery switches. If you type a lot or just want that thock—this is it.
+      </div>
+      <a href="https://amzn.to/45QqFba" class="product-button" target="_blank">View on Amazon</a>
+    </div>
 
-    <a href="https://fiverr.com/?ref=sidhu" target="_blank" class="link-card">
-      <span class="link-icon">👨‍💻</span>
-      <span class="link-title">Fiverr – outsource code fixes or creative tasks</span>
-    </a>
-
-    <a href="https://gumroad.com/?ref=sidhu" target="_blank" class="link-card">
-      <span class="link-icon">🛒</span>
-      <span class="link-title">Gumroad – sell your code, templates, or digital tools</span>
-    </a>
+    <!-- Best Mouse -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61o9yppjX3L._AC_SL1500_.jpg" alt="Best Mouse">
+      <div class="product-title">Best Mouse</div>
+      <div class="product-description">
+        Lightweight, super responsive, and built for long sessions. Whether you’re editing, coding, or gaming—this mouse goes hard.
+      </div>
+      <a href="https://amzn.to/4eweLp0" class="product-button" target="_blank">View on Amazon</a>
+    </div>
 
     <p class="disclaimer">
-      Affiliate disclaimer: I may earn a small commission if you buy through these. Doesn’t cost you extra — supports my builds.
+      Affiliate disclaimer: I may earn a small commission if you buy through these links. No extra cost to you.
     </p>
   </div>
 </body>
