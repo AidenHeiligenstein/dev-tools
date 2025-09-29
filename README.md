@@ -1,15 +1,15 @@
-# 🔧 Aiden Heiligenstein's Dev Toolkit
+# Aiden Heiligenstein - Portfolio
 
-A curated list of tools I actually use as a developer and student. Organized, fast-loading, and hosted free via GitHub Pages.
+My personal portfolio and resume site showcasing projects, experience, and skills.
 
-## 🌐 Live Demo
-https://aidenheiligenstein.github.io/dev-tools/
+## 🌐 Live Site
+**https://aidenheiligenstein.github.io/dev-tools/**
 
-## 📂 What’s in this Repo
-- `index.html` — main landing page
-- Simple CSS styling
-- Fully mobile-responsive
+## 📋 About
+A clean, professional portfolio site built with vanilla HTML/CSS. No frameworks, no build process - just fast-loading, accessible web design.
 
-## ⚠️ Affiliate Note
-Some links are affiliate links. Supporting them helps me out at no cost to you 🙌
-
+## 🛠️ Tech Stack
+- HTML5
+- CSS3
+- Google Fonts (Inter)
+- Hosted on GitHub Pages
