@@ -3,152 +3,274 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiden's Tech & Dev Picks</title>
+  <title>Aiden Heiligenstein | Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f1f3f5;
-      color: #111;
-      margin: 0;
-      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 720px;
-      margin: 60px auto;
-      padding: 0 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+
+    header {
+      margin-bottom: 60px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    p.subtitle {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-
-    .product-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 18px 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .product-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .product-card img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .product-title {
+      font-size: 2.25rem;
       font-weight: 600;
-      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #1a1a1a;
     }
 
-    .product-description {
+    .subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .contact a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #1a1a1a;
+    }
+
+    .intro {
+      font-size: 1.05rem;
       color: #444;
+      line-height: 1.7;
+    }
+
+    .project, .job {
+      background: white;
+      padding: 24px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .project h3, .job h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      color: #555;
       font-size: 0.95rem;
     }
 
-    .product-button {
-      margin-top: 10px;
+    ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-category {
+      background: white;
+      padding: 16px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+      font-weight: 500;
       text-align: center;
-      background-color: #0073e6;
-      color: white;
-      padding: 10px 16px;
+    }
+
+    .education {
+      background: white;
+      padding: 24px;
       border-radius: 8px;
-      text-decoration: none;
+      border: 1px solid #e0e0e0;
+    }
+
+    .education h3 {
+      font-size: 1.1rem;
       font-weight: 600;
+      margin-bottom: 6px;
     }
 
-    .disclaimer {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 2.5rem;
-      text-align: center;
+    .education .meta {
+      margin-bottom: 16px;
     }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #111;
-        color: #eee;
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 20px;
       }
 
-      .product-card {
-        background: #1e1e1e;
-        color: #eee;
+      h1 {
+        font-size: 1.75rem;
       }
 
-      .product-description {
-        color: #ccc;
+      .contact {
+        flex-direction: column;
+        gap: 8px;
       }
 
-      .disclaimer {
-        color: #999;
-      }
-
-      .product-button {
-        background-color: #228be6;
+      .skills {
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🧠 Aiden's Tech & Dev Picks</h1>
-    <p class="subtitle">Affordable gear I’d recommend to any coder, gamer, or desk goblin. Affiliate links that help support me 🤍</p>
-
-    <!-- Budget Keyboard -->
-    <div class="product-card">
-      <div class="product-title">Budget Recommended Keyboard</div>
-      <div class="product-description">
-        A magnetic 60% board with RGB and a hot look for cheap. Great for minimal setups or budget builds.
+    <header>
+      <h1>Aiden Heiligenstein</h1>
+      <p class="subtitle">Software Engineer</p>
+      <div class="contact">
+        <span>Gibsonia, PA</span>
+        <span>•</span>
+        <span>(724) 759-9148</span>
+        <span>•</span>
+        <a href="mailto:Aiden@Heiligenstein.net">Aiden@Heiligenstein.net</a>
+        <span>•</span>
+        <a href="https://github.com/AidenHeiligenstein" target="_blank">GitHub</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/aiden-heiligenstein/" target="_blank">LinkedIn</a>
       </div>
-      <a href="https://amzn.to/3IsPwbc" class="product-button" target="_blank">View on Amazon</a>
-    </div>
+    </header>
 
-    <!-- Best Keyboard -->
-    <div class="product-card">
-      <div class="product-title">Best Keyboard – Keychron K8</div>
-      <div class="product-description">
-        Wireless, hot-swappable, and Mac/Windows friendly. Clean mechanical typing with a pro look and feel.
+    <section>
+      <p class="intro">
+        Software engineer specializing in AI, full-stack development, and automation. Experienced in building scalable applications with modern technologies, from real-time collaboration platforms to enterprise document processing systems. Computer Science graduate from Ohio University with a focus on practical, results-driven solutions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      
+      <div class="project">
+        <h3>Digital Collaboration Platform</h3>
+        <p class="meta">Full-Stack Development</p>
+        <p class="description">
+          Engineered a full-stack platform as an alternative to popular digital whiteboards, enhancing team collaboration with real-time features. Built with Node.js, JavaScript, and Python, supporting concurrent multi-user operations with optimized performance.
+        </p>
       </div>
-      <a href="https://amzn.to/45QqFba" class="product-button" target="_blank">View on Amazon</a>
-    </div>
 
-    <!-- Best Mouse -->
-    <div class="product-card">
-      <div class="product-title">Best Mouse – Logitech G703 LIGHTSPEED</div>
-      <div class="product-description">
-        Wireless, lightweight, and responsive. Ideal for gaming and devs who want smooth tracking and comfort.
+      <div class="project">
+        <h3>Online Multiplayer Game</h3>
+        <p class="meta">Game Development & Distribution</p>
+        <p class="description">
+          Launched an online multiplayer game on a major distribution platform, achieving significant downloads and positive user feedback within the first month. Implemented optimized networking architecture for smooth gameplay experience.
+        </p>
       </div>
-      <a href="https://amzn.to/4eweLp0" class="product-button" target="_blank">View on Amazon</a>
-    </div>
 
-    <p class="disclaimer">
-      Affiliate disclaimer: I may earn a small commission if you buy through these links. No extra cost to you.
-    </p>
+      <div class="project">
+        <h3>Enterprise Document Processing Pipeline</h3>
+        <p class="meta">AI & Automation</p>
+        <p class="description">
+          Developed a sophisticated pipeline using AI technologies to process documents at scale for enterprise clients. Improved processing efficiency significantly while integrating advanced tools for enhanced user interfaces and engagement.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      
+      <div class="job">
+        <h3>Software Engineer</h3>
+        <p class="meta">Freelance | Remote</p>
+        <ul>
+          <li>Engineered scalable Python applications for data debugging and image editing supporting concurrent user operations</li>
+          <li>Collaborated with stakeholders on system architecture design, significantly improving business process efficiency</li>
+          <li>Developed applications integrating APIs and AI technologies to boost automation and workflow efficiency</li>
+          <li>Conducted performance testing to ensure software quality and system reliability</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Software Design Engineer</h3>
+        <p class="meta">Ohio University | Athens, Ohio</p>
+        <ul>
+          <li>Designed and developed software solutions for community projects, achieving 25% efficiency improvement</li>
+          <li>Collaborated with cross-functional teams to define requirements and align solutions with community needs</li>
+          <li>Implemented software design best practices to enhance code quality and maintainability</li>
+          <li>Created custom websites and applications that improved local sports and social interactions by 40%</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-category">Frontend Development</div>
+        <div class="skill-category">Backend Development</div>
+        <div class="skill-category">API Design</div>
+        <div class="skill-category">Database Management</div>
+        <div class="skill-category">Cloud & Deployment</div>
+        <div class="skill-category">Version Control</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education">
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p class="meta">Ohio University | Athens, Ohio | GPA: 3.1</p>
+        <ul>
+          <li>Led team at university hackathon to develop innovative software solution</li>
+          <li>Active member of Cybersecurity Club, focusing on network security and ethical hacking</li>
+          <li>Contributed to research center projects in collaboration with faculty</li>
+        </ul>
+      </div>
+    </section>
   </div>
 </body>
 </html>
